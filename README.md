@@ -165,11 +165,10 @@ This will return a dataframe with the organic results of the search.
 
 The `Searches` object is only used when you call the `get_result_set` method from the `Batch` object. It's a list of `Search` objects. 
 
-'''python 
-
+```python 
 result = batch.get_result_set()
-
 ```
+
 
 This object has two several that are worth noting: 
 
