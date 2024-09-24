@@ -2,6 +2,8 @@
 import requests 
 #library to handle data 
 import pandas as pd 
+#dataclass 
+from dataclasses import dataclass, field 
 
 #list of search types that we can use for the ValueSERP API
 SEARCH_TYPE = [
@@ -21,10 +23,12 @@ SEARCH_TYPE = [
 ]
 
 #class to handle the account information 
+@dataclass  
 class Account: 
-    def __init__(self, api_key):
-        #api needed to use the ValueSERP API
-        self.api_key = api_key
+    api_key: str
+    endpoints: dict = field(default_factory=dict, init=False, repr=False)
+    
+    def __post_init__(self):
         #endpoints to make requests to the ValueSERP API
         self.endpoints = {
             #retrieve all the locations available  for the API 
@@ -41,21 +45,7 @@ class Account:
             #endpoint to list all the batches in our account 
             'list_batches': 'https://api.valueserp.com/batches'
         }
-    
-    def __repr__(self):
-        info = self.info()
-        
-        return """
-    <valueserp.account(
-        api_key='{}',
-        email='{}',
-        plan='{}', 
-    )>""".format(
-            info['api_key'],
-            info['email'],
-            info['plan']
-        )
-        
+            
     #method to get information about the account 
     def info(self):
         params = {
@@ -148,7 +138,6 @@ class Account:
         api_result = requests.get('https://api.valueserp.com/batches',  params = params)
         api_response = api_result.json()
         return pd.DataFrame(api_response['batches'])
-
 
 class Search:
     def __init__(self, json_response):
