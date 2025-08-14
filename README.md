@@ -15,7 +15,7 @@ First, install the package using:
 ## Quickstart
 
 - Create an account on [ValueSERP](https://www.valueserp.com/)
-- Choose your plan amongst the two options availabl [here](https://www.valueserp.com/pricing). For ad-hoc analysis, I strongly advise to go with the "Pay as you go" option. It's the most flexible and the one I use. 
+- Choose your plan amongst the two options available [here](https://www.valueserp.com/pricing). For ad-hoc analysis, I strongly advise to go with the "Pay as you go" option. It's the most flexible and the one I use. 
 - Get your API key and copy it somewhere to use it later on in your code. 
 
 ## Usage 
