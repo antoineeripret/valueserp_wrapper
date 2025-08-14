@@ -39,9 +39,9 @@ class Account:
             #endpoint to make a search 
             'search':'https://api.valueserp.com/search', 
             #endpoint to create a batch 
-            'create_batch':f'https://api.valueserp.com/batches?api_key={api_key}', 
+            'create_batch':f'https://api.valueserp.com/batches?api_key={self.api_key}', 
             #endpoint to delete a batch 
-            'delete_batch':f'https://api.valueserp.com/batches/batch_id?api_key={api_key}', 
+            'delete_batch':f'https://api.valueserp.com/batches/batch_id?api_key={self.api_key}', 
             #endpoint to list all the batches in our account 
             'list_batches': 'https://api.valueserp.com/batches'
         }
