@@ -15,7 +15,7 @@ First, install the package using:
 ## Quickstart
 
 - Create an account on [ValueSERP](https://www.valueserp.com/)
-- Choose your plan amongst the two options available [here](https://www.valueserp.com/pricing). For ad-hoc analysis, I strongly advise to go with the "Pay as you go" option. It's the most flexible and the one I use. 
+- Choose your plan amongst the two options availabl [here](https://www.valueserp.com/pricing). For ad-hoc analysis, I strongly advise to go with the "Pay as you go" option. It's the most flexible and the one I use. 
 - Get your API key and copy it somewhere to use it later on in your code. 
 
 ## Usage 
@@ -68,7 +68,7 @@ One of the most powerful features of ValueSERP is the ability to run multiple se
 batch = account.create_batch('My batch')
 ```
 
-By default, the batch accepts every `search_type` available [here]I(https://www.valueserp.com/docs/batches-api/batches/create), but if you want to restrict it, you can use the `search_type` parameter. For example: 
+By default, the batch accepts every `search_type` available [here](https://www.valueserp.com/docs/batches-api/batches/create), but if you want to restrict it, you can use the `search_type` parameter. For example: 
 
 ```python
 batch = account.create_batch(name="My batch", search_type="places")
