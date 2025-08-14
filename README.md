@@ -68,7 +68,7 @@ One of the most powerful features of ValueSERP is the ability to run multiple se
 batch = account.create_batch('My batch')
 ```
 
-By defaukt, the batch accepts every `search_type` available [here]I(https://www.valueserp.com/docs/batches-api/batches/create), but if you want to restrict it, you can use the `search_type` parameter. For example: 
+By default, the batch accepts every `search_type` available [here]I(https://www.valueserp.com/docs/batches-api/batches/create), but if you want to restrict it, you can use the `search_type` parameter. For example: 
 
 ```python
 batch = account.create_batch(name="My batch", search_type="places")

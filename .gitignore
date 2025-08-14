@@ -168,3 +168,4 @@ bin/
 include/ 
 lib/ 
 share/ 
+*.lock 
